@@ -12,9 +12,18 @@
   box-sizing: border-box;
 }
 
+img{
+  width: 100%;
+  object-fit: cover;
+}
+
 a{
   color: inherit;
   text-decoration: none;
+}
+
+i{
+  color: inherit;
 }
 
 body {
@@ -219,19 +228,94 @@ margin-right: 2rem;
   color: black;
   margin-bottom: 2rem;
 }
-#report .report-des{
+ .report-des{
   display: flex;
   justify-content: space-between;
   align-items: center;
   font-size: 1.4rem;
   color: black;
 }
-
-#report .report-des p{
+ .report-des p{
   width: 65%;
 }
-#report .report-des button{
+ .report-des button{
   padding: .6rem 2rem;
   font-size: 1rem;
   background: transparent;
+}
+
+
+.report-cards{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 1.5rem;
+  margin-top: 3rem;
+}
+
+.report-card h6{
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+}
+.report-card p{
+  font-size: 1.1rem;
+  margin-bottom: 1.5rem;
+}
+
+.report-btn{
+  display: flex;
+  gap: .5rem;
+}
+
+.report-btn button{
+  padding: .5rem 1.5rem;
+  font-size: 1.1rem;
+  background: transparent;
+  opacity: .6;
+  color: black;
+  cursor: pointer;
+  transition: all .3s ease-in;
+  margin-top: 1rem;
+ 
+}
+
+.report-btn button:hover{
+  opacity: 1;
+  color: black;
+}
+.report-btn i{
+ font-size: 1.2rem;
+ color: black;
+}
+.report-btn i:hover{
+  opacity: 1;
+  color: black;
+}
+
+.report-btn  .v-report{
+  border: none;
+  color: rgb(170, 121, 61);
+  opacity: .7;
+}
+
+.report-card img{
+  height: 16rem;
+  transition: all .3s ease-in-out;
+}
+.report-card img:hover{
+  opacity: .7;
+}
+
+
+/* ************ EDUCATION ********** */
+
+
+#education{
+  padding: 0 4rem;
+  margin-top: 4rem;
+}
+
+#education h1{
+  font-size: 3rem;
+  color: black;
+  margin-bottom: 2rem;
 }
