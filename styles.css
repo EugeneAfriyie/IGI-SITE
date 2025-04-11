@@ -310,8 +310,9 @@ margin-right: 2rem;
 
 
 #education{
-  padding: 0 4rem;
+  padding:  4rem;
   margin-top: 4rem;
+  background: rgba(236, 234, 234, 0.308);
 }
 
 #education h1{
@@ -328,4 +329,35 @@ margin-right: 2rem;
 
 .edu-l-img img{
   height: 100%;
+}
+
+
+.course-info{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+
+.course-detail{
+  display: flex;
+  flex-direction: column;
+}
+
+.course-detail a{
+  border-top: 1px solid #867e7e;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  font-size: 1.5rem;
+  transition: all .3s ease-in-out;
+}
+
+.course-detail a:hover span{
+  color: black;
+  transform: scale(1.05);
+}
+.course-detail a i{
+  font-size: 1.2rem;
+  color: #867e7e;
 }
