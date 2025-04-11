@@ -188,3 +188,57 @@ margin-right: 2rem;
   object-fit: cover;
 }
 
+
+
+
+/* ****************   Commitment to Confidence   ********** */
+
+#commit{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 4rem;
+  gap: 1rem;
+}
+#commit div{
+  /* background: #000; */
+}
+
+.commit-img{
+  width: 100%;
+  
+  
+}
+.commit-img img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  
+}
+
+
+.commit-info{
+  padding: 2rem  0rem 0 4rem;
+}
+
+.commit-info .text-header{
+  display: flex; 
+  align-items: center;
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+.commit-info .text-header img{
+  width: 10rem;
+}
+.commit-info .text-header h3{
+  font-size: 2rem;
+}
+.commit-info .commit-text{
+  font-size: 1.1rem;
+}
+.commit-info .commit-text p{
+  font-size: 1.1rem;
+  /* word-spacing: .2rem; */
+  margin-top: 2rem;
+  line-height: 1.7rem;
+}
