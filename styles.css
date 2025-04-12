@@ -38,21 +38,34 @@ header{
 .navbar {
   display: flex;
   align-items: center;
-  /* justify-content: space-between; */
+  justify-content: space-between;
   background-color: white;
   box-shadow: 0 2px 4px rgba(0,0,0,0.05);
-  padding: .9rem ;
+  padding: .5rem 1rem ;
   padding-right: 3rem;
   width: 100%;
+  flex-wrap: wrap;
+
+}
+
+/* .logo {
+  white-space: normal;
+  width: 100%;
+} */
+
+.m-item{
+  display: flex;
+  align-items: center;
 }
 
 .logo {
-margin-right: 2rem;
+margin-right: 1.5rem;
+display: block;
 
 }
 
 .logo img {
-  width: 9.5rem;
+  width: 9rem;
   height: auto;
 }
 
@@ -61,22 +74,33 @@ margin-right: 2rem;
   flex: 1;
   list-style: none;
   display: flex;
-  gap: .5rem;
+  gap: .7rem;
   margin: 0;
   padding: 0;
   position: relative;
+
+
 }
 
 .nav-links li {
   position: relative;
+
+
 }
 
 .nav-links li a {
   text-decoration: none;
   color: #3f3d3d;
-  font-size: 1.05rem;
-  padding: 8px;
+  font-size: .9rem;
   display: flex;
+  align-items: center;
+  white-space: nowrap;
+  padding: .3rem;
+
+}
+
+.nav-links li a i{
+  font-size: .6rem;
 }
 
 .arrow {
@@ -127,6 +151,8 @@ margin-right: 2rem;
   display: flex;
   align-items: center;
   gap: 15px;
+  white-space: nowrap;
+
 }
 
 .icon {
@@ -138,12 +164,13 @@ margin-right: 2rem;
 .verify-btn {
   background-color: #354549cb;
   color: white;
-  font-size: 1.05rem;
+  font-size: 1rem;
   border: none;
-  padding: .8rem 1.5rem;
+  padding: .5rem 1.2rem;
   border-radius: 4px;
   cursor: pointer;
   transition: background-color 0.3s ease;
+  white-space: nowrap;
 }
 
 .verify-btn:hover {
