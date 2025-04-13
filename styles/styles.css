@@ -10,6 +10,11 @@
   font-family: "hanken grotesk", sans-serif;
   color: #3f3d3d;
   box-sizing: border-box;
+  list-style: none;
+}
+
+#menu{
+  display: none;
 }
 
 img{
@@ -29,10 +34,25 @@ i{
 body {
   font-family: Arial, sans-serif;
   margin-bottom: 1000rem;
+  margin: 3rem;
+  min-width: 318px;
+}
+
+main{
+  margin: auto;
+  max-width: 1800px;
+  margin: auto;
+  margin-top: 7rem;
 }
 
 header{
   margin-bottom: 4rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: #fff;
+  z-index: 2;
 }
 
 .navbar {
@@ -45,13 +65,12 @@ header{
   padding-right: 3rem;
   width: 100%;
   flex-wrap: wrap;
+  max-width: 1800px;
+  margin: auto;
 
 }
 
-/* .logo {
-  white-space: normal;
-  width: 100%;
-} */
+
 
 .m-item{
   display: flex;
@@ -110,19 +129,17 @@ display: block;
   align-self: flex-end;
 }
 
-/* Rotate arrow on hover */
 .dropdown:hover .arrow {
   transform: rotate(-90deg);
 }
 
-/* Dropdown animation */
 .dropdown-menu {
   opacity: 0;
   transform: translateY(10px);
   pointer-events: none;
   transition: opacity 0.3s ease, transform 0.3s ease;
   position: absolute;
-  top: 38px;
+  top: 20px;
   left: 0;
   background-color: white;
   box-shadow: 0 2px 8px rgba(0,0,0,0.15);
@@ -130,7 +147,7 @@ display: block;
   list-style: none;
   padding: 10px 0;
   min-width: 160px;
-  z-index: 100;
+  z-index: 10;
 }
 
 .dropdown-menu li a {
@@ -138,21 +155,52 @@ display: block;
   padding: 8px 20px;
   color: #333;
   white-space: nowrap;
+  cursor: pointer;
 }
 
-/* Show dropdown on hover */
+
+.dropdown-menu li a:hover{
+  opacity: .7;
+}
+
+.sub-dropdown-menu{
+  opacity: 0;
+  transform: translateX(90%);
+  top: 0;
+  background-color: #fff;
+  position: absolute;
+  pointer-events: none;
+  z-index: 100;
+}
+
+.sub-dropdown:hover .sub-dropdown-menu {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.sub-dropdown{
+  cursor: pointer;
+}
+
+.sub-dropdown:hover .sub-arrow {
+  transform: rotate(-90deg);
+}
+.dropdown:hover .arrow {
+  transform: rotate(-90deg);
+}
+
 .dropdown:hover .dropdown-menu {
   opacity: 1;
   transform: translateY(0);
   pointer-events: auto;
 }
 
+
 .nav-icons {
   display: flex;
   align-items: center;
   gap: 15px;
   white-space: nowrap;
-
 }
 
 .icon {
@@ -188,19 +236,21 @@ display: block;
 #hero{
     display: grid;
     grid-template-columns: 1fr 1fr;
-    align-items: center;
+    /* align-items: center; */
     background: rgb(238, 233, 233);
-    padding: 0 4rem;
-    margin-bottom: 3rem;
+    padding: 2rem 4rem;
+    margin-bottom: 10rem;
 
 }
 
 .h-text {
   height: 100%;
+  /* padding: 2rem; */
 }
 .h-text h1{
-  font-size: 3rem;
+  font-size: 2rem;
   margin-bottom: 1rem;
+  font-weight: normal;
 }
 
 .h-text p{
@@ -233,6 +283,7 @@ display: block;
   margin: auto;
   text-align: center;
   width: 75%;
+  margin-bottom: 4rem;
 }
 
 #ads img{
@@ -246,7 +297,7 @@ display: block;
 
 
 #report{
-  padding: 0 4rem;
+  padding: 0 3rem;
   margin-top: 4rem;
 
 }
@@ -259,77 +310,104 @@ display: block;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  font-size: 1.4rem;
+  font-size: 1.3rem;
   color: black;
 }
  .report-des p{
   width: 65%;
 }
+ .report-des a{
+
+  align-self: flex-end;
+}
  .report-des button{
-  padding: .6rem 2rem;
+  padding: .4rem 1.4rem;
   font-size: 1rem;
   background: transparent;
 }
 
-
-.report-cards{
+.report-cards {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  gap: 1.5rem;
+  gap: 1rem;
   margin-top: 3rem;
+  height: auto;
+  overflow-x: auto;
+  overflow-y: hidden; /* Prevent vertical scrolling */
+  scroll-behavior: smooth; /* Smooth scrolling */
+  -webkit-overflow-scrolling: touch; /* Smooth scrolling on touch devices */
+  scrollbar-width: thin; /* Firefox: slimmer scrollbar */
+  scrollbar-color: #ccc transparent; /* Firefox: custom scrollbar color */
 }
 
-.report-card h6{
-  font-size: 1.5rem;
+/* Chrome, Edge, and Safari scrollbar styling */
+.report-cards::-webkit-scrollbar {
+  height: 8px; /* Slimmer scrollbar */
+}
+
+.report-cards::-webkit-scrollbar-track {
+  background: transparent; /* Track background */
+}
+
+.report-cards::-webkit-scrollbar-thumb {
+  background: #ccc; /* Scrollbar color */
+  border-radius: 4px;
+}
+
+.report-cards::-webkit-scrollbar-thumb:hover {
+  background: #aaa; /* Scrollbar hover color */
+}
+
+.report-card {
+  flex: 0 0 auto; /* Prevent cards from shrinking */
+}
+
+/* Rest of your existing CSS remains unchanged */
+.report-card h6 {
+  font-size: 1.3rem;
   margin-bottom: 2rem;
 }
-.report-card p{
-  font-size: 1.1rem;
+.report-card p {
+  font-size: 1rem;
   margin-bottom: 1.5rem;
 }
-
-.report-btn{
+.report-btn {
   display: flex;
-  gap: .5rem;
+  gap: 0.5rem;
 }
-
-.report-btn button{
-  padding: .5rem 1.5rem;
-  font-size: 1.1rem;
+.report-btn button {
+  padding: 0.3rem 0.7rem;
+  font-size: 1rem;
   background: transparent;
-  opacity: .6;
+  opacity: 0.6;
   color: black;
   cursor: pointer;
-  transition: all .3s ease-in;
+  transition: all 0.3s ease-in;
   margin-top: 1rem;
- 
 }
-
-.report-btn button:hover{
+.report-btn button:hover {
   opacity: 1;
   color: black;
 }
-.report-btn i{
- font-size: 1.2rem;
- color: black;
+.report-btn i {
+  font-size: 1rem;
+  color: black;
 }
-.report-btn i:hover{
+.report-btn i:hover {
   opacity: 1;
   color: black;
 }
-
-.report-btn  .v-report{
+.report-btn .v-report {
   border: none;
   color: rgb(170, 121, 61);
-  opacity: .7;
+  opacity: 0.7;
 }
-
-.report-card img{
+.report-card img {
   height: 16rem;
-  transition: all .3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
-.report-card img:hover{
-  opacity: .7;
+.report-card img:hover {
+  opacity: 0.7;
 }
 
 
@@ -344,8 +422,13 @@ display: block;
 
 #education h1{
   font-size: 3rem;
-  color: black;
+  /* color: black; */
   margin-bottom: 2rem;
+  font-weight: normal;
+}
+
+#education .report-des p{
+  font-size: 1.1rem;
 }
 
 .edu-l-img{
@@ -356,6 +439,12 @@ display: block;
 
 .edu-l-img img{
   height: 100%;
+}
+
+.ava-courses h4{
+  font-size: 1.5rem;
+  font-weight: normal;
+  margin: 2rem 0;
 }
 
 
@@ -376,7 +465,7 @@ display: block;
   justify-content: space-between;
   align-items: center;
   padding: 1rem;
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   transition: all .3s ease-in-out;
 }
 
@@ -403,7 +492,7 @@ display: block;
 
 .e-images{
   width: 100%;
-  height: 35rem;
+  height: 25rem;
 }
 .e-images img{
   width: 100%;
@@ -443,6 +532,12 @@ display: block;
 }
 
 .Consumer-edu .report-cards{
+  overflow-x: auto;
+  overflow-y: hidden; /* Prevent vertical scrolling */
+  scroll-behavior: smooth; /* Smooth scrolling */
+  -webkit-overflow-scrolling: touch; /* Smooth scrolling on touch devices */
+  scrollbar-width: thin; /* Firefox: slimmer scrollbar */
+  scrollbar-color: #ccc transparent; 
   gap: 3rem;
 }
 .Consumer-edu .report-card{
@@ -458,16 +553,23 @@ display: block;
   gap: 2rem;
   margin-top: 3rem;
   padding: 2rem;
+  overflow: auto;
+  scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar{
+  display: none;
 }
 
 .p-a{
   color: rgb(116, 147, 151);
   font-weight: 600;
   margin-top: 1rem;
+  font-size: .8rem;
 }
 
 .p-long-text{
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   margin: 1rem 0;
 }
 
@@ -485,7 +587,7 @@ display: block;
 
 .bottom-text  a i{
   transform: rotate(-45deg);
-  font-size: 1rem;
+  font-size: .9rem;
 }
 
 
@@ -517,7 +619,7 @@ display: block;
   gap: 2rem;
   justify-content: space-between;
   align-items: center;
-  background-color: #f7f8f9;
+  background-color: hsl(210, 14%, 97%);
   padding:  4rem;
   border-radius: 8px;
   margin: 2rem ;
@@ -594,6 +696,7 @@ footer{
   padding:3rem  4rem;
   background-color: #000;
   color: #fff;
+  margin-top: 3rem;
 }
 
 
@@ -661,7 +764,7 @@ footer{
   flex: 1;
   max-width: 250px;
   
-  font-size: .8rem;
+  font-size: 1rem;
   margin-top: 1rem;
   color: white;
 }
@@ -679,6 +782,7 @@ footer{
   display: flex;
   gap: 40px;
   flex-wrap: wrap;
+  justify-content: space-between;
 }
 
 .footer .footer-column {
@@ -716,7 +820,8 @@ footer .line {
   display: flex;
   justify-content: space-between;
   color: white;
-  font-size: .9rem;
+  font-size: .8rem;
+  text-align: center;
 }
 .copyright p{
   color: white;
@@ -726,4 +831,168 @@ footer .line {
   display: flex;
   gap: 1rem;
   color: white;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+
+.social i{
+ font-size: 1.1rem;
+ cursor: pointer;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Basic Styles */
+.mobile-navbar {
+  position: fixed;
+  top: 0;
+  left: 50%;
+  right: 0%;
+  bottom: 0;
+  z-index: 1000;
+
+
+  background: white;
+  padding: 1rem 0;
+  z-index: 100;
+  transform: translateX(100%);
+  transition: transform 0.3s ease-in-out;
+}
+
+
+.mobile-navbar.active {
+  transform: translateX(0);
+
+}
+
+.mobile-nav-links, .mobile-submenu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.mobile-nav-links li,
+.mobile-submenu li {
+  padding: 0.8rem 1rem;
+  border-bottom: 1px solid #eee;
+}
+
+
+.mobile-nav-links {
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+  position: relative;
+}
+
+
+.mobile-submenu {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: white;
+  width: 100%;
+  height: 100%;
+  z-index: 999;
+  flex-direction: column;
+  transform: translateX(100%);
+  transition: transform 0.3s ease-in-out;
+}
+
+.mobile-submenu.active {
+  transform: translateX(0);
+
+}
+
+.mobile-submenu-btn,
+.mobile-back-btn {
+  background: none;
+  border: none;
+  width: 100%;
+  text-align: left;
+  font-size: 1rem;
+  display: flex;
+  justify-content: space-between;
+  cursor: pointer;
+}
+
+.mobile-nav-icons {
+  margin-top: 1rem;
+}
+
+
+
+
+
+
+
+
+
+.scroll-div{
+  display: flex;
+  justify-content: end;
+  margin-top: 1rem;
+}
+
+.scroll-controls{
+  display: flex;
+  gap: 1rem;
+
+}
+ .scroll-btn{
+  border: 1px solid black;
+  /* padding: .5rem; */
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  justify-content: center; 
+  background: transparent;
+  cursor: pointer;
+}
+
+.scroll-btn i{
+  color: gray;
+}
+
+.scroll-btn:hover{
+  background: transparent;
+  color: black;
+
+}
+.scroll-btn i:hover{
+  color: black;
+
+}
+
+.scroll-left-arrow{
+  transform: rotate(-180deg);
+}
+
+.overlay{
+  display: none;
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top:0;
+  z-index: 2;
+  backdrop-filter: blur(2px);
+}
+
+.overlay.active{
+  display: block;
 }

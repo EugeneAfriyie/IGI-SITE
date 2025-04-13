@@ -1,3 +1,366 @@
-@media (max-width: 1024px) {
+
+
+
+
+
+@media (min-width: 1024px) and (max-width: 1200px) {
+    .logo {
+        white-space: normal;
+        width: 100%;
+      }
+
+      #ads p{
+        width: 90%;
+    }
+
+    
+    .subscription-container {
+        padding: 3rem;
+    }
+
+    #consumer-cards .report-card{
+      width: 350px;
+  }
+
+  body{
+    margin: 0;
+  }
 
 }
+
+@media (max-width: 1024px) {
+
+  body{
+    margin: 0;
+  }
+
+.nav-links{
+    display: none;
+}
+#nav-i{
+    display: none;
+}
+#menu{
+    display: block;
+    font-size: 1.5rem;
+}
+
+.navbar{
+    padding: 1rem;
+}
+
+.logo img {
+    width: 6rem;
+  }
+
+  .nav-icons{
+    display: none;
+  }
+
+  #hero{
+    padding: 2rem 3rem;
+
+  }
+
+
+  #ads{
+    margin: 0 2rem;
+    padding: 2rem;
+
+  }
+  
+#ads p{
+    width: 100%;
+  font-size: 2rem;
+
+}
+
+.report-cards {
+  display: flex;
+}
+
+.report-card{
+  width: 350px;
+}
+.report-card img{
+  height: 12rem;
+}
+
+#consumer-cards .report-card{
+    width: 350px;
+}
+
+
+.Consumer-edu .report-card img{
+  margin-bottom: 4rem;
+}
+
+#education,#explore,.GemBlog{
+    padding:  2rem;
+
+}
+
+.edu-l-img{
+    height: 20rem;
+  }
+
+  #e-learning{
+   
+    gap: 2rem;
+    padding: 1rem;
+  
+  }
+
+  .explore-card{
+    width: 350px;
+  }
+
+  .subscription-container {
+  grid-template-columns: repeat(1, 1fr);
+
+    padding: 3rem;
+}
+
+  
+
+}
+
+
+
+
+@media (max-width: 768px) {
+
+    #hero{
+        display: grid;
+        grid-template-columns: 1fr;
+        padding: 1rem;
+    }
+    #ads{
+        margin: 0;
+        padding: 2rem;
+    
+      }
+      
+    #ads p{
+        width: 100%;
+      font-size: 1.5rem;
+    
+    }
+
+    .report-des{
+        flex-direction: column;
+        gap: 2rem;
+    }
+    .report-des p{
+        width: 100%;
+      }
+
+    .report-des a{
+
+        align-self: center;
+      }
+      
+
+      #report{
+        padding: 1rem;
+      }
+
+      #report h1{
+        font-size: 2rem;
+      }
+
+      .report-des{
+        font-size: 1.2rem
+      }
+      
+      .course-info{
+        grid-template-columns:1fr;
+      }
+
+      .course-detail a{
+        padding: .5rem;
+        font-size: 1.1rem;
+        transition: all .3s ease-in-out;
+      }
+
+      #e-learning{
+        grid-template-columns: repeat(1,1fr);
+
+      }
+
+      .e-images{
+        height: 35rem;
+      }
+
+      .e-header{
+        display: flex;
+        align-items: center;
+        gap: .5rem;
+      }
+
+      .explore-card{
+        width: 350px;
+        padding: 1rem;
+      }
+
+      .report-card{
+        width: 320px;
+      }
+
+      .report-card img{
+        height: 15rem;
+      }
+
+      #consumer-cards .report-card{
+        width: 400px;
+    }
+    
+    
+    .Consumer-edu .report-card img{
+      margin-bottom: 3rem;
+    }
+    
+
+      
+.explore-cards{
+    padding: 0rem;
+    gap: 0;
+}
+
+
+.sub-header {
+  flex-direction: column;
+}
+
+.subscription-container{
+    margin: 0;
+    
+}
+
+
+.copyright{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    color: white;
+  }
+
+  footer{
+    padding: 2rem 1rem;
+}
+
+.footer .footer-links {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+
+  .terms-social{
+    order: -1;
+  }
+
+  
+
+}
+
+
+@media (max-width: 480px) {
+
+
+
+    .h-text p{
+        font-size: 1.2rem;
+    }
+
+    #ads{
+        padding: 1rem;
+    
+      }
+
+      #ads p{
+        width: 100%;
+      font-size: 1.3rem;
+    
+    }
+
+    #report{
+        padding: 1rem;
+      }
+
+      .report-card{
+        width: 18rem;
+        overflow: hidden;
+      }
+      .report-card img{
+        height: 12rem;
+      }
+
+      #consumer-cards .report-card{
+        width: 300px;
+    }
+
+    #consumer-cards .report-btn button  {
+      font-size: .9rem;
+    }
+    
+    
+    .Consumer-edu .report-card img{
+      margin-bottom: 2rem;
+    }
+    
+
+      
+     
+
+      .report-des{
+        font-size: 1.1rem
+      }
+
+      
+#education,#explore,.GemBlog{
+    padding:  1rem;
+
+}
+
+.edu-l-img{
+    height: 15rem;
+  }
+
+  .e-header{
+   
+    justify-content: center;
+  }
+
+  .el-p-l{
+    font-size: 1.4rem;
+  }
+
+  .e-images{
+    height: 25rem;
+  }
+
+
+  .explore-card{
+    width: 250px;
+  }
+
+  .subscription-container{
+   padding: 1rem;
+}
+
+
+footer{
+    padding: 3rem 1rem;
+}
+
+.mobile-navbar {
+  left: 30%;
+}
+
+
+}
+
+
+
